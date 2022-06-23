@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+  <h1 align="center">Make a Post</h1>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css" />
+  <form method="POST">
+    <textarea name="text" id="text" class="form-control"></textarea>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js"></script>
+    <script>
+      $('#text').emojioneArea({
+        pickerPosition:'bottom'
+      });
+    </script>
+
+    <br />
+    <div align="center">
+      <button type="submit" class="btn btn-lg btn-primary">Post</button>
+    </div>
+  </form>
+  <br />
+  <div align="center">
+    <a href="/home"
+      ><button type="button" class="btn btn-lg btn-secondary">Back</button></a
+    >
+  </div>
+  {% endblock %}
